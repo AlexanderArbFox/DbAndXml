@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d6f4dd0e96554760b35e0645bc568555" Name="Diagram1">
+        <EntityTypeShape EntityType="NovokomBankModel.sysdiagram" Width="1.5" PointX="0.75" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="NovokomBankModel.Детализация_прихода" Width="1.5" PointX="8.25" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="NovokomBankModel.Детализация_расхода" Width="1.5" PointX="11.25" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="NovokomBankModel.Организации" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NovokomBankModel.Приход" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="NovokomBankModel.Расход" Width="1.5" PointX="6" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="NovokomBankModel.Склад" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NovokomBankModel.Товар" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="NovokomBankModel.FK_Детализация_прихода_Приход" ManuallyRouted="false" />
+        <AssociationConnector Association="NovokomBankModel.FK_Детализация_прихода_Товар" ManuallyRouted="false" />
+        <AssociationConnector Association="NovokomBankModel.FK_Детализация_расхода_Расход" ManuallyRouted="false" />
+        <AssociationConnector Association="NovokomBankModel.FK_Детализация_расхода_Товар" ManuallyRouted="false" />
+        <AssociationConnector Association="NovokomBankModel.FK_Приход_Организации" ManuallyRouted="false" />
+        <AssociationConnector Association="NovokomBankModel.FK_Расход_Организации" ManuallyRouted="false" />
+        <AssociationConnector Association="NovokomBankModel.FK_Приход_Склад" ManuallyRouted="false" />
+        <AssociationConnector Association="NovokomBankModel.FK_Расход_Склад" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
