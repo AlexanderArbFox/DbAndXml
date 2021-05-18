@@ -38,6 +38,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cmbSelect = new System.Windows.Forms.ComboBox();
             this.lbSum = new System.Windows.Forms.Label();
+            this.btnExcel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReport)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -147,11 +148,24 @@
             this.lbSum.Size = new System.Drawing.Size(0, 29);
             this.lbSum.TabIndex = 11;
             // 
+            // btnExcel
+            // 
+            this.btnExcel.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnExcel.ForeColor = System.Drawing.Color.Black;
+            this.btnExcel.Location = new System.Drawing.Point(1574, 392);
+            this.btnExcel.Name = "btnExcel";
+            this.btnExcel.Size = new System.Drawing.Size(216, 51);
+            this.btnExcel.TabIndex = 12;
+            this.btnExcel.Text = "Выгрузка Excel";
+            this.btnExcel.UseVisualStyleBackColor = false;
+            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
+            // 
             // Report
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1924, 1050);
+            this.Controls.Add(this.btnExcel);
             this.Controls.Add(this.lbSum);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
@@ -180,5 +194,6 @@
         private System.Windows.Forms.ComboBox cmbSelect;
         private System.Windows.Forms.Label lbSum;
         private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Button btnExcel;
     }
 }

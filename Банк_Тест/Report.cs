@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Excel1 = Microsoft.Office.Interop.Excel;
 
 namespace Банк_Тест
 {
@@ -80,5 +82,29 @@ namespace Банк_Тест
                 }
             }
     }
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+            //Выгрузка в excel
+            var b = DateTime.Now;
+            string path = Directory.GetCurrentDirectory() + @"\" + "Отчет.xlsx";
+            Excel1.Application excelapp = new Excel1.Application();
+            Excel1.Workbook workbook = excelapp.Workbooks.Add();
+            Excel1.Worksheet worksheet = workbook.ActiveSheet;
+
+            for (int i = 1; i < dgvReport.RowCount + 1; i++)
+            {
+                for (int j = 1; j < dgvReport.ColumnCount + 1; j++)
+                {
+                    worksheet.Rows[i].Columns[j] = dgvReport.Rows[i - 1].Cells[j - 1].Value;
+                }
+            }
+            excelapp.AlertBeforeOverwriting = false;
+            worksheet.SaveAs(path);
+            excelapp.Quit();
+
+            MessageBox.Show("Данные успешно сохранены в Excel");
+        
+        }
     }
 }
